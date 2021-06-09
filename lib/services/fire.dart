@@ -13,6 +13,11 @@ class FireService {
     return await client.create(request);
   }
 
+  static Future<UpdateResponse> update(UpdateRequest request) async {
+    var client = FireClient(Client().channel);
+    return await client.update(request);
+  }
+
   static Future<DeleteResponse> delete(DeleteRequest request) async{
     var client = FireClient(Client().channel);
     return await client.delete(request);
